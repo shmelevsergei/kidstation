@@ -1,0 +1,558 @@
+@use "../mixins.scss";
+.kidstation-page {
+	.section_1 {
+		background-image: url("/backgrounds/section-1-320.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+
+		height: 580px;
+		padding-top: 85px;
+
+		@media screen and (min-width: 321px) {
+			background-image: url("/backgrounds/section-1-640.png");
+		}
+
+		@media screen and (min-width: 640px) {
+			height: 655px;
+			padding-top: 123px;
+		}
+		@media screen and (min-width: 641px) {
+			background-image: url("/backgrounds/section-1-768.png");
+		}
+		@media screen and (min-width: 768px) {
+			height: 750px;
+			padding-top: 152px;
+		}
+		@media screen and (min-width: 769px) {
+			background-image: url("/backgrounds/section-1-1024.png");
+		}
+		@media screen and (min-width: 1024px) {
+			height: 734px;
+			padding-top: 173px;
+		}
+		@media screen and (min-width: 1025px) {
+			background-image: url("/backgrounds/section-1-1280.png");
+		}
+		@media screen and (min-width: 1280px) {
+			height: 920px;
+			padding-top: 206px;
+		}
+		@media screen and (min-width: 1281px) {
+			background-image: url("/backgrounds/section-1-1920.png");
+		}
+		@media screen and (min-width: 1920px) {
+			height: 1229px;
+			padding-top: 251px;
+		}
+		@media screen and (min-width: 1921px) {
+			background-image: url("/backgrounds/section-1-3072.png");
+		}
+		@media screen and (min-width: 1921px) and (max-width: 3072px) {
+			@include mixins.adaptiveSize1920to3072(height, 1229, 1500);
+			@include mixins.adaptiveSize1920to3072(padding-top, 251, 189);
+		}
+		@media screen and (min-width: 3072px) {
+			height: 1500px;
+			padding-top: 189px;
+		}
+
+		&__header {
+			font-family: "Nunito", sans-serif;
+			font-weight: 900;
+			transform: rotate(-2deg);
+		}
+		&__subtitle {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 20px;
+			@media screen and (min-width: 640px) {
+				font-size: 28px;
+				text-align: left;
+			}
+			@media screen and (min-width: 768px) {
+				font-size: 32px;
+				padding-left: 20px;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 40px;
+				max-width: 370px;
+			}
+			@media screen and (min-width: 1280px) {
+				font-size: 64px;
+				max-width: 600px;
+				padding-left: 40px;
+			}
+			@media screen and (min-width: 1920px) {
+				font-size: 96px;
+				max-width: 890px;
+				padding-left: 50px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(font-size, 96, 128);
+				@include mixins.adaptiveSize1920to3072(max-width, 890, 1170);
+			}
+			@media screen and (min-width: 3072px) {
+				font-size: 128px;
+				max-width: 1170px;
+			}
+		}
+		&__title {
+			padding: 10px 20px;
+			width: 248px;
+			height: 52px;
+			background-color: #fff;
+			position: relative;
+			border-radius: 119px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 5px;
+			h1 {
+				text-transform: uppercase;
+				font-size: 32px;
+				color: #ff524a;
+			}
+			&::before {
+				position: absolute;
+				content: "";
+				width: 50px;
+				height: 51px;
+				background-image: url("/section_1/decor-spiral.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				right: -25px;
+				top: -10px;
+				z-index: -1;
+			}
+			@media screen and (min-width: 640px) {
+				width: 300px;
+				height: 60px;
+				margin-left: unset;
+				h1 {
+					font-size: 40px;
+				}
+				&::before {
+					width: 80px;
+					height: 83px;
+					transform: rotate(-90deg);
+					top: unset;
+					bottom: -40px;
+					right: -52px;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				width: 320px;
+				height: 80px;
+				padding: 20px 30px;
+				&::before {
+					width: 107px;
+					height: 110px;
+					z-index: 1;
+					bottom: -43px;
+					right: -76px;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				width: 476px;
+				height: 104px;
+				h1 {
+					font-size: 64px;
+				}
+				&::before {
+					width: 143px;
+					height: 148px;
+					bottom: -64px;
+					right: -98px;
+				}
+			}
+			@media screen and (min-width: 1280px) {
+				width: 683px;
+				height: 136px;
+				h1 {
+					font-size: 96px;
+				}
+				&::before {
+					bottom: -9px;
+					right: -112px;
+				}
+			}
+			@media screen and (min-width: 1920px) {
+				width: 1203px;
+				height: 210px;
+				padding: 20px 50px;
+				h1 {
+					font-size: 170px;
+				}
+				&::before {
+					width: 224px;
+					height: 231px;
+					top: -213px;
+					right: 10px;
+				}
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(width, 1203, 1398);
+				@include mixins.adaptiveSize1920to3072(height, 210, 240);
+				h1 {
+					@include mixins.adaptiveSize1920to3072(font-size, 170, 200);
+				}
+				&::before {
+					@include mixins.adaptiveSize1920to3072(right, 10, -428);
+				}
+			}
+			@media screen and (min-width: 3072px) {
+				width: 1398px;
+				height: 240px;
+
+				h1 {
+					font-size: 200px;
+				}
+				&::before {
+					right: -428px;
+				}
+			}
+		}
+		&__content {
+			margin-top: 22px;
+			position: relative;
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+			@media screen and (min-width: 640px) {
+				margin-top: 25px;
+			}
+			@media screen and (min-width: 768px) {
+				margin-top: 30px;
+			}
+			@media screen and (min-width: 1024px) {
+				margin-top: 40px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(margin-top, 40, 74);
+			}
+			@media screen and (min-width: 3072px) {
+				margin-top: 74px;
+			}
+		}
+		&__video {
+			@media screen and (min-width: 1024px) {
+				display: flex;
+				align-items: center;
+				column-gap: 20px;
+			}
+			@media screen and (min-width: 1280px) {
+				column-gap: 30px;
+			}
+			@media screen and (min-width: 1920px) {
+				column-gap: 50px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(column-gap, 50, 40);
+			}
+			@media screen and (min-width: 3072px) {
+				column-gap: 40px;
+				align-items: start;
+			}
+			&-image {
+				width: 199px;
+				height: 123px;
+				--btsz: 43px;
+				filter: drop-shadow(0px 4px 10px rgb(178, 46, 40, 50%));
+				img {
+					display: block;
+					object-fit: contain;
+				}
+				.play-button {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: var(--btsz);
+					height: var(--btsz);
+				}
+				@media screen and (min-width: 640px) {
+					width: 271px;
+					height: 168px;
+					--btsz: 60px;
+				}
+				@media screen and (min-width: 640px) {
+					width: 326px;
+					height: 202px;
+					--btsz: 80px;
+				}
+				@media screen and (min-width: 1280px) {
+					width: 397px;
+					height: 246px;
+					--btsz: 100px;
+				}
+				@media screen and (min-width: 1920px) {
+					width: 543px;
+					height: 338px;
+					--btsz: 146px;
+				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(width, 543, 710);
+					@include mixins.adaptiveSize1920to3072(height, 338, 437);
+					.play-button {
+						@include mixins.adaptiveSize1920to3072(width, 146, 190);
+						@include mixins.adaptiveSize1920to3072(
+							height,
+							146,
+							190
+						);
+					}
+				}
+				@media screen and (min-width: 3072px) {
+					width: 710px;
+					height: 437px;
+					--btsz: 190px;
+				}
+			}
+			&-content {
+				@media screen and (min-width: 640px) {
+					margin-top: 20px;
+				}
+				@media screen and (min-width: 768px) {
+					margin-top: 25px;
+				}
+				@media screen and (min-width: 1024px) {
+					margin-top: -25px;
+				}
+				@media screen and (min-width: 1920px) {
+					margin-top: 0;
+				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(margin-top, 0, 22);
+				}
+				@media screen and (min-width: 3072px) {
+					margin-top: 22px;
+				}
+			}
+
+			&-text {
+				font-size: 14px;
+				font-weight: 600;
+				max-width: 180px;
+				padding-left: 10px;
+				@media screen and (min-width: 640px) {
+					font-size: 20px;
+					max-width: unset;
+					padding-left: unset;
+				}
+				@media screen and (min-width: 768px) {
+					font-size: 24px;
+				}
+				@media screen and (min-width: 1024px) {
+					max-width: 408px;
+				}
+				@media screen and (min-width: 1280px) {
+					font-size: 32px;
+				}
+				@media screen and (min-width: 1920px) {
+					font-size: 40px;
+					max-width: 520px;
+				}
+			}
+
+			&-button {
+				display: block;
+				width: 300px;
+				height: 62px;
+				margin-top: 81px;
+				border: 3px solid white;
+				border-radius: 10px;
+				color: white;
+				font-family: "Bicubik", sans-serif;
+				font-size: 20px;
+				text-transform: uppercase;
+				margin-left: auto;
+				margin-right: auto;
+				@media screen and (min-width: 640px) {
+					margin-top: 10px;
+					margin-left: unset;
+				}
+				@media screen and (min-width: 1024px) {
+					margin-top: 30px;
+					margin-left: 60px;
+					border: 5px solid white;
+					border-radius: 20px;
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: -60px;
+						transform: translateY(-50%);
+						width: 40px;
+						height: 30px;
+
+						display: block;
+						background-image: url("section_1/arrow.svg");
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+					}
+				}
+				@media screen and (min-width: 1280px) {
+					margin-left: 94px;
+					&::before {
+						left: -94px;
+						width: 74px;
+						height: 53px;
+					}
+				}
+			}
+		}
+
+		&__image {
+			width: 147px;
+			height: 255px;
+			position: absolute;
+			top: -40px;
+			right: -29px;
+			&:before {
+				position: absolute;
+				content: "";
+				background-image: url("/section_1/decor-spiral.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				transform: rotate(90deg);
+				filter: blur(3px);
+				width: 89px;
+				height: 92px;
+				bottom: -20px;
+				right: -14px;
+			}
+
+			@media screen and (min-width: 640px) {
+				width: 223px;
+				height: 385px;
+				top: -209px;
+				right: 0;
+				&:before {
+					width: 149px;
+					height: 153px;
+					transform: rotate(-93deg);
+					bottom: -70px;
+					right: -48px;
+				}
+			}
+
+			@media screen and (min-width: 768px) {
+				top: -229px;
+				right: 38px;
+				width: 249px;
+				height: 431px;
+				&::before {
+					width: 199px;
+					height: 205px;
+					right: -96px;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				width: 279px;
+				height: 484px;
+				top: -262px;
+				right: -5px;
+				&::before {
+					width: 266px;
+					height: 273px;
+					bottom: -120px;
+					right: -117px;
+				}
+			}
+			@media screen and (min-width: 1280px) {
+				width: 423px;
+				height: 726px;
+				top: -459px;
+				right: 0;
+				&::before {
+					width: 449px;
+					height: 462px;
+					bottom: -132px;
+					right: -214px;
+				}
+			}
+			@media screen and (min-width: 1920px) {
+				width: 564px;
+				height: 982px;
+				top: -611px;
+				right: 67px;
+				&::before {
+					width: 701px;
+					height: 721px;
+					bottom: -167px;
+					right: -452px;
+				}
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(width, 564, 732);
+				@include mixins.adaptiveSize1920to3072(height, 982, 1273);
+				@include mixins.adaptiveSize1920to3072(top, -611, -764);
+				@include mixins.adaptiveSize1920to3072(right, 67, 329);
+				&::before {
+					@include mixins.adaptiveSize1920to3072(bottom, -167, 55);
+				}
+			}
+			@media screen and (min-width: 3072px) {
+				width: 732px;
+				height: 1273px;
+				top: -764px;
+				right: 329px;
+				&::before {
+					bottom: 55px;
+				}
+			}
+		}
+		&__footer {
+			margin-top: 10px;
+			width: 100%;
+			&-button {
+				width: 300px;
+				height: 56px;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			@media screen and (min-width: 640px) {
+				margin-top: 30px;
+				&-button {
+					width: 100%;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				&-button {
+					height: 62px;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				margin-top: 33px;
+				position: relative;
+				z-index: 10;
+				&-button {
+					height: 56px;
+				}
+			}
+			@media screen and (min-width: 1280px) {
+				margin-top: 40px;
+				position: static;
+				&-button {
+					height: 70px;
+				}
+			}
+			@media screen and (min-width: 1920px) {
+				margin-top: 64px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(margin-top, 64, 128);
+			}
+			@media screen and (min-width: 3072px) {
+				margin-top: 128px;
+			}
+		}
+	}
+}

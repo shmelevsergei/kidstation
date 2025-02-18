@@ -1,0 +1,25 @@
+@use "base.scss";
+@use "reset.scss";
+@use "fonts.scss";
+
+@use "./sections/section_1.scss";
+@use "./sections/section_2.scss";
+@use "./sections/section_3.scss";
+
+body {
+	font-family: "Mont", sans-serif;
+}
+
+.button-yellow {
+	background-color: #fdfc28;
+	color: black;
+	font-size: 18px;
+	font-family: "Bicubik", sans-serif;
+	text-transform: uppercase;
+	@media screen and (min-width: 640px) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: 1280px) {
+		font-size: 26px;
+	}
+}

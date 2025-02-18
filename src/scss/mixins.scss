@@ -1,0 +1,110 @@
+@mixin custom-polygon {
+	clip-path: polygon(
+		0 0,
+		85% 0,
+		100% 25%,
+		100% calc(100% - 25px),
+		50% calc(100% - 25px),
+		47% 100%,
+		0 100%
+	);
+	background-color: transparent;
+	overflow: hidden;
+
+	@media screen and (min-width: 1024px) {
+		clip-path: polygon(
+			0 0,
+			85% 0,
+			100% 25%,
+			100% calc(100% - 60px),
+			50% calc(100% - 60px),
+			47% 100%,
+			0 100%
+		);
+	}
+
+	@media screen and (min-width: 3072px) {
+		clip-path: polygon(
+			0 0,
+			84% 0,
+			100% 26%,
+			100% calc(100% - 94px),
+			49% calc(100% - 94px),
+			46% 100%,
+			0 100%
+		);
+	}
+}
+
+@mixin corner-top-left {
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+
+	@media (max-width: 639.98px) {
+		width: 56px;
+		height: 56px;
+	}
+}
+
+@mixin corner-top-right {
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: transparent;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	@media (max-width: 639.98px) {
+		width: 56px;
+		height: 56px;
+	}
+}
+
+@mixin corner-bottom-right {
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: transparent;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	@media (max-width: 639.98px) {
+		width: 56px;
+		height: 56px;
+	}
+}
+
+@mixin corner-bottom-left {
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: transparent;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	@media (max-width: 639.98px) {
+		width: 56px;
+		height: 56px;
+	}
+}
+
+@mixin button-violet {
+	background-color: base.$primaryViolet;
+	color: white;
+}
+
+@mixin adaptiveSize1920to3072($property, $min-size, $max-size) {
+	#{$property}: calc(
+		#{$min-size + px} + (#{$max-size} - #{$min-size}) * ((100vw - 1921px) /
+					(3072 - 1921))
+	);
+}
