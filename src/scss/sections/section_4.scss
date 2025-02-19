@@ -1,0 +1,157 @@
+@use "../mixins.scss";
+
+.kidstation-page {
+	.section_4 {
+		height: 764px;
+		background-image: url("/backgrounds/section-4-320.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-top: 80px;
+
+		.wave {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 30px;
+			width: 100%;
+		}
+		&__title {
+			font-family: "Nunito", sans-serif;
+			font-size: 28px;
+			font-weight: 900;
+			text-align: center;
+			span {
+				display: block;
+			}
+		}
+		&__slider {
+			margin-top: 20px;
+			.swiper-slide {
+				&.swiper-slide-active {
+					.slide {
+						&::before {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.swiper-slide:nth-child(odd) {
+				.slide {
+					&:before {
+						background-image: url("/section_4/background-card-right-320.png");
+					}
+				}
+			}
+			.swiper-slide:nth-child(even) {
+				.slide {
+					&:before {
+						background-image: url("/section_4/background-card-left-320.png");
+					}
+				}
+			}
+		}
+
+		.slider {
+			&__slide {
+				width: 300px;
+				height: 462px;
+				background-position: center;
+				background-repeat: no-repeat;
+				margin-left: auto;
+				margin-right: auto;
+				overflow: hidden;
+				border-bottom-right-radius: 30px;
+				border-bottom-left-radius: 30px;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-image: url("/section_4/elements-320.png");
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0.8;
+					transition: opacity 0.3s ease-in-out;
+				}
+			}
+			.slide {
+				&__wrapper {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					padding: 51px 16px 42px 14px;
+
+					color: black;
+					position: relative;
+					z-index: 1;
+				}
+				&__title {
+					font-size: 16px;
+					color: #ff524a;
+					font-weight: 900;
+					text-transform: uppercase;
+				}
+				&__text {
+					margin-top: 20px;
+					font-size: 14px;
+				}
+				&__age {
+					margin-top: 10px;
+					font-size: 16px;
+					font-weight: 900;
+					span {
+						color: #ff524a;
+					}
+				}
+				&__image {
+					width: 268px;
+					height: 167px;
+					margin-top: auto;
+					img {
+						object-fit: contain;
+					}
+				}
+			}
+			&__navigation {
+				--btnz: 60px;
+				display: flex;
+				align-items: center;
+				gap: 40px;
+				max-width: max-content;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 30px;
+				transform: rotate(-5deg);
+				button {
+					width: var(--btnz);
+					height: var(--btnz);
+					background-color: white;
+					border-radius: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+			.pagination {
+				transform: rotate(5deg);
+				span {
+					font-family: "Nunito", sans-serif;
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}
