@@ -1,15 +1,13 @@
 <div class="swiper-slide">
 	<div class="slider__slide slide">
 		<div class="slide__wrapper">
-			<h3 class="slide__title">{=$title}</h3>
-			<p class="slide__text">{=$text}</p>
-			<p class="slide__age">Возраст <span>{=$age}</span></p>
+			<div class="slide__text-wrapper">
+				<h3 class="slide__title">{=$title}</h3>
+				<p class="slide__text">{=$text}</p>
+				<p class="slide__age">Возраст <span>{=$age}</span></p>
+			</div>
 			<div class="slide__image">
 				<picture>
-					<source
-						srcset="{=$linkImg3072}"
-						media="(min-width: 3072px)"
-					/>
 					<source
 						srcset="{=$linkImg1920}"
 						media="(min-width: 1920px)"
@@ -22,10 +20,7 @@
 						srcset="{=$linkImg1024}"
 						media="(min-width: 1024px)"
 					/>
-					<source
-						srcset="{=$linkImg768}"
-						media="(min-width: 768px)"
-					/>
+
 					<source
 						srcset="{=$linkImg640}"
 						media="(min-width: 640px)"

@@ -1,0 +1,17 @@
+<div class="section_5__item item">
+	<div class="item__wrapper-text">
+		<h3>{=$title}</h3>
+		<p>{=$description}</p>
+	</div>
+	<div class="item__image">
+		<picture>
+			<source srcset="{=$linkImg3072}" media="(min-width: 3072px)" />
+			<source srcset="{=$linkImg1920}" media="(min-width: 1920px)" />
+			<source srcset="{=$linkImg1024}" media="(min-width: 1024px)" />
+			<source srcset="{=$linkImg768}" media="(min-width: 768px)" />
+			<source srcset="{=$linkImg640}" media="(min-width: 640px)" />
+			<img src="{=$linkImg}" alt="{=$title}" />
+		</picture>
+		<div class="item__image-gradient"></div>
+	</div>
+</div>

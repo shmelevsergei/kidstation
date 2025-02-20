@@ -10,6 +10,47 @@
 		position: relative;
 		padding-top: 80px;
 
+		@media screen and (min-width: 321px) {
+			background-image: url("/backgrounds/section-4-640.png");
+		}
+
+		@media screen and (min-width: 640px) {
+			height: 902px;
+		}
+
+		@media screen and (min-width: 641px) {
+			background-image: url("/backgrounds/section-4-768.png");
+		}
+		@media screen and (min-width: 769px) {
+			background-image: url("/backgrounds/section-4-1024.png");
+		}
+		@media screen and (min-width: 1024px) {
+			padding-top: 164px;
+			height: 832px;
+		}
+		@media screen and (min-width: 1025px) {
+			background-image: url("/backgrounds/section-4-1280.png");
+		}
+		@media screen and (min-width: 1280px) {
+			padding-top: 160px;
+		}
+		@media screen and (min-width: 1281px) {
+			background-image: url("/backgrounds/section-4-1920.png");
+		}
+		@media screen and (min-width: 1920px) {
+			height: 1197px;
+			padding-top: 188px;
+		}
+		@media screen and (min-width: 1921px) {
+			background-image: url("/backgrounds/section-4-3072.png");
+		}
+		@media screen and (min-width: 1921px) and (max-width: 3072px) {
+			@include mixins.adaptiveSize1920to3072(height, 1197, 1400);
+		}
+		@media screen and (min-width: 3072px) {
+			height: 1400px;
+		}
+
 		.wave {
 			position: absolute;
 			top: 0;
@@ -17,6 +58,18 @@
 			transform: translateX(-50%);
 			height: 30px;
 			width: 100%;
+			@media screen and (min-width: 768px) {
+				height: 46px;
+			}
+			@media screen and (min-width: 1280px) {
+				height: 62px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(height, 62, 94);
+			}
+			@media screen and (min-width: 3073px) {
+				height: auto;
+			}
 		}
 		&__title {
 			font-family: "Nunito", sans-serif;
@@ -26,10 +79,44 @@
 			span {
 				display: block;
 			}
+			@media screen and (min-width: 640px) {
+				font-size: 32px;
+				span {
+					display: inline;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				font-size: 40px;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 48px;
+			}
+			@media screen and (min-width: 1920px) {
+				font-size: 96px;
+			}
 		}
 		&__slider {
 			margin-top: 20px;
+			@media screen and (min-width: 640px) {
+				margin-top: 48px;
+			}
+			@media screen and (min-width: 768px) {
+				margin-top: 40px;
+			}
+			@media screen and (min-width: 1024px) {
+				margin-top: 60px;
+			}
+			@media screen and (min-width: 1920px) {
+				margin-top: 50px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(margin-top, 50, 194);
+			}
+			@media screen and (min-width: 3072px) {
+				margin-top: 194px;
+			}
 			.swiper-slide {
+				width: max-content;
 				&.swiper-slide-active {
 					.slide {
 						&::before {
@@ -41,15 +128,90 @@
 
 			.swiper-slide:nth-child(odd) {
 				.slide {
+					&::after {
+						background-image: url("/section_4/elements-320.png");
+					}
 					&:before {
 						background-image: url("/section_4/background-card-right-320.png");
+					}
+
+					@media screen and (min-width: 640px) {
+						&::after {
+							background-image: url("/section_4/elements-640.png");
+						}
+						&:before {
+							background-image: url("/section_4/background-card-right-640.png");
+						}
+					}
+					@media screen and (min-width: 1024px) {
+						&:before {
+							background-image: url("/section_4/background-card-right-1024.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1024-right.png");
+						}
+					}
+					@media screen and (min-width: 1280px) {
+						&:before {
+							background-image: url("/section_4/background-card-right-1280.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1280-right.png");
+						}
+					}
+					@media screen and (min-width: 1920px) {
+						&:before {
+							background-image: url("/section_4/background-card-right-1920.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1920-right.png");
+						}
 					}
 				}
 			}
 			.swiper-slide:nth-child(even) {
 				.slide {
+					&::after {
+						background-image: url("/section_4/elements-320.png");
+					}
+
 					&:before {
 						background-image: url("/section_4/background-card-left-320.png");
+					}
+					@media screen and (min-width: 640px) {
+						&::after {
+							background-image: url("/section_4/elements-640.png");
+						}
+						&:before {
+							background-image: url("/section_4/background-card-left-640.png");
+						}
+					}
+					@media screen and (min-width: 1024px) {
+						&:before {
+							background-image: url("/section_4/background-card-left-1024.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1024-left.png");
+						}
+						&__wrapper {
+							flex-direction: row-reverse;
+						}
+					}
+					@media screen and (min-width: 1280px) {
+						&:before {
+							background-image: url("/section_4/background-card-left-1280.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1280-left.png");
+						}
+					}
+					@media screen and (min-width: 1920px) {
+						&:before {
+							background-image: url("/section_4/background-card-left-1920.png");
+						}
+						&::after {
+							background-image: url("/section_4/elements-1920-left.png");
+						}
 					}
 				}
 			}
@@ -61,12 +223,30 @@
 				height: 462px;
 				background-position: center;
 				background-repeat: no-repeat;
+				background-size: cover;
 				margin-left: auto;
 				margin-right: auto;
 				overflow: hidden;
 				border-bottom-right-radius: 30px;
 				border-bottom-left-radius: 30px;
 				position: relative;
+				@media screen and (min-width: 640px) {
+					width: 500px;
+					height: 580px;
+					border-bottom-right-radius: 80px;
+					border-bottom-left-radius: 80px;
+				}
+				@media screen and (min-width: 1024px) {
+					width: 944px;
+					height: 400px;
+				}
+				@media screen and (min-width: 1280px) {
+					width: 1200px;
+				}
+				@media screen and (min-width: 1920px) {
+					width: 1760px;
+					height: 590px;
+				}
 				&::after {
 					content: "";
 					position: absolute;
@@ -74,7 +254,8 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url("/section_4/elements-320.png");
+					background-position: center;
+					background-repeat: no-repeat;
 				}
 				&::before {
 					content: "";
@@ -85,6 +266,8 @@
 					height: 100%;
 					opacity: 0.8;
 					transition: opacity 0.3s ease-in-out;
+					background-position: center;
+					background-repeat: no-repeat;
 				}
 			}
 			.slide {
@@ -98,21 +281,87 @@
 					color: black;
 					position: relative;
 					z-index: 1;
+					@media screen and (min-width: 640px) {
+						padding: 52px 30px 44px 39px;
+					}
+					@media screen and (min-width: 1024px) {
+						flex-direction: row;
+						padding: 52px 0 0;
+						justify-content: center;
+						column-gap: 30px;
+					}
+					@media screen and (min-width: 1280px) {
+						column-gap: 34px;
+						padding-top: 54px;
+					}
+					@media screen and (min-width: 1920px) {
+						padding-top: 80px;
+						column-gap: 50px;
+					}
+				}
+				&__text-wrapper {
+					@media screen and (min-width: 1024px) {
+						max-width: 319px;
+					}
+					@media screen and (min-width: 1280px) {
+						max-width: 409px;
+					}
+					@media screen and (min-width: 1920px) {
+						max-width: 600px;
+					}
 				}
 				&__title {
 					font-size: 16px;
 					color: #ff524a;
 					font-weight: 900;
 					text-transform: uppercase;
+					@media screen and (min-width: 640px) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: 1024px) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 32px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 40px;
+					}
 				}
 				&__text {
 					margin-top: 20px;
 					font-size: 14px;
+					@media screen and (min-width: 640px) {
+						font-size: 16px;
+					}
+					@media screen and (min-width: 1024px) {
+						margin-top: 40px;
+						font-size: 18px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 28px;
+					}
 				}
 				&__age {
 					margin-top: 10px;
 					font-size: 16px;
 					font-weight: 900;
+					@media screen and (min-width: 640px) {
+						font-size: 18px;
+					}
+					@media screen and (min-width: 1024px) {
+						font-size: 20px;
+						margin-top: 20px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 32px;
+					}
 					span {
 						color: #ff524a;
 					}
@@ -123,6 +372,24 @@
 					margin-top: auto;
 					img {
 						object-fit: contain;
+					}
+					@media screen and (min-width: 640px) {
+						width: 420px;
+						height: 306px;
+					}
+					@media screen and (min-width: 1024px) {
+						width: 500px;
+						height: 304px;
+						flex-shrink: 0;
+						margin-top: 0;
+					}
+					@media screen and (min-width: 1280px) {
+						width: 640px;
+						height: 306px;
+					}
+					@media screen and (min-width: 1920px) {
+						width: 950px;
+						height: 458px;
 					}
 				}
 			}
@@ -144,12 +411,29 @@
 					padding-left: 15px;
 					padding-right: 15px;
 				}
+				@media screen and (min-width: 640px) {
+					margin-top: 40px;
+				}
+				@media screen and (min-width: 1024px) {
+					margin-right: 0;
+				}
+				@media screen and (min-width: 1920px) {
+					margin-top: 66px;
+					--btnz: 100px;
+					button {
+						padding-left: 23px;
+						padding-right: 24px;
+					}
+				}
 			}
 			.pagination {
 				transform: rotate(5deg);
 				span {
 					font-family: "Nunito", sans-serif;
 					font-size: 32px;
+					@media screen and (min-width: 1920px) {
+						font-size: 48px;
+					}
 				}
 			}
 		}

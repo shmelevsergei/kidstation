@@ -90,8 +90,8 @@
 				@include mixins.adaptiveSize1920to3072(height, 62, 94);
 			}
 
-			@media screen and (min-width: 3072px) {
-				height: 94px;
+			@media screen and (min-width: 3073px) {
+				height: auto;
 			}
 		}
 
