@@ -1,0 +1,476 @@
+@use "../mixins.scss";
+
+.kidstation-page {
+	.section_8 {
+		height: 701px;
+		background-image: url("/backgrounds/section-8-320.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		padding-top: 60px;
+		position: relative;
+
+		@media screen and (min-width: 321px) {
+			background-image: url("/backgrounds/section-8-640.png");
+		}
+		@media screen and (min-width: 640px) {
+			height: 821px;
+		}
+
+		@media screen and (min-width: 641px) {
+			background-image: url("/backgrounds/section-8-768.png");
+		}
+
+		@media screen and (min-width: 768px) {
+			height: 727px;
+		}
+		@media screen and (min-width: 769px) {
+			background-image: url("/backgrounds/section-8-1024.png");
+		}
+		@media screen and (min-width: 1024px) {
+			height: 841px;
+		}
+		@media screen and (min-width: 1025px) {
+			background-image: url("/backgrounds/section-8-1280.png");
+		}
+		@media screen and (min-width: 1280px) {
+			height: 1026px;
+			padding-top: 80px;
+		}
+		@media screen and (min-width: 1281px) {
+			background-image: url("/backgrounds/section-8-1920.png");
+		}
+		@media screen and (min-width: 1920px) {
+			padding-top: 100px;
+			height: 1323px;
+		}
+
+		@media screen and (min-width: 1921px) {
+			background-image: url("/backgrounds/section-8-3072.png");
+		}
+		@media screen and (min-width: 1921px) and (max-width: 3072px) {
+			@include mixins.adaptiveSize1920to3072(height, 1323, 1590);
+		}
+		@media screen and (min-width: 3072px) {
+			height: 1590px;
+		}
+		.wave {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 30px;
+			width: 100%;
+			@media screen and (min-width: 768px) {
+				height: 46px;
+			}
+			@media screen and (min-width: 1280px) {
+				height: 62px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(height, 62, 94);
+			}
+			@media screen and (min-width: 3073px) {
+				height: auto;
+			}
+		}
+
+		&__title {
+			font-family: "Nunito", sans-serif;
+			font-size: 28px;
+			text-transform: uppercase;
+			@media screen and (min-width: 640px) {
+				font-size: 32px;
+			}
+			@media screen and (min-width: 768px) {
+				font-size: 40px;
+			}
+			@media screen and (min-width: 1280px) {
+				font-size: 48px;
+			}
+			@media screen and (min-width: 1920px) {
+				font-size: 96px;
+			}
+			span {
+				display: block;
+				width: max-content;
+				margin-left: auto;
+				margin-right: auto;
+
+				&.gradient-text {
+					& > span {
+						font-family: "Mont", sans-serif;
+						font-weight: 800;
+						background-image: linear-gradient(
+							253deg,
+							#c338b7 0 22%,
+							#df1581 40%,
+							#f50159 65%,
+							#fe3a44 82%,
+							#ff493c 99%,
+							#fe5335 100%
+						);
+						background-clip: text;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+
+					font-size: 24px;
+					margin-top: 5px;
+					position: relative;
+					transform: rotate(-2.48deg);
+					width: 309px;
+					height: 44px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-radius: 70px;
+					background-color: white;
+					filter: drop-shadow(0px 4px 10px rgba(178, 46, 40, 0.5));
+					@media screen and (min-width: 640px) {
+						width: 351px;
+						height: 48px;
+						font-size: 28px;
+					}
+					@media screen and (min-width: 768px) {
+						width: 392px;
+						height: 72px;
+						font-size: 32px;
+						margin-top: -5px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 40px;
+						width: 460px;
+						height: 80px;
+						margin-top: -10px;
+					}
+				}
+			}
+		}
+
+		.content-top {
+			margin-top: 30px;
+			@media screen and (min-width: 640px) {
+				margin-top: 60px;
+				display: flex;
+				column-gap: 22px;
+			}
+			@media screen and (min-width: 768px) {
+				margin-top: 30px;
+				column-gap: 46px;
+			}
+			@media screen and (min-width: 1024px) {
+				column-gap: 67px;
+			}
+			@media screen and (min-width: 1280px) {
+				column-gap: 223px;
+			}
+			@media screen and (min-width: 1920px) {
+				margin-top: 76px;
+				column-gap: 217px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(margin-top, 76, 56);
+				@include mixins.adaptiveSize1920to3072(column-gap, 217, 447);
+			}
+			@media screen and (min-width: 3072px) {
+				margin-top: 56px;
+				column-gap: 447px;
+			}
+			&__image {
+				display: none;
+				@media screen and (min-width: 640px) {
+					display: block;
+					width: 258px;
+					height: 191px;
+					flex-shrink: 0;
+					margin-top: auto;
+					margin-bottom: 5px;
+				}
+				@media screen and (min-width: 1024px) {
+					width: 377px;
+					height: 279px;
+				}
+				@media screen and (min-width: 1280px) {
+					width: 427px;
+					height: 316px;
+				}
+				@media screen and (min-width: 1920px) {
+					width: 627px;
+					height: 464px;
+				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(width, 627, 733);
+					@include mixins.adaptiveSize1920to3072(height, 464, 542);
+					@include mixins.adaptiveSize1920to3072(margin-left, 0, 321);
+				}
+				@media screen and (min-width: 3072px) {
+					width: 733px;
+					height: 542px;
+					margin-left: 321px;
+				}
+			}
+			&__items {
+				@media screen and (min-width: 1280px) {
+					margin-top: auto;
+				}
+				@media screen and (min-width: 1920px) {
+					margin-top: unset;
+				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(margin-top, 0, 56);
+				}
+				@media screen and (min-width: 3072px) {
+					margin-top: 56px;
+				}
+				h3 {
+					text-align: center;
+					font-size: 18px;
+					@media screen and (min-width: 640px) {
+						text-align: left;
+					}
+					@media screen and (min-width: 1024px) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 32px;
+					}
+					span {
+						font-weight: 800;
+					}
+				}
+			}
+			.numbers {
+				margin-top: 20px;
+				display: grid;
+				row-gap: 10px;
+				@media screen and (min-width: 640px) {
+					margin-top: 30px;
+					padding-top: 22px;
+					padding-bottom: 22px;
+				}
+				@media screen and (min-width: 768px) {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+				@media screen and (min-width: 1024px) {
+					margin-top: 60px;
+					padding-top: 0;
+					padding-bottom: 0;
+					row-gap: 20px;
+				}
+				&__item {
+					display: flex;
+					justify-content: center;
+					align-items: end;
+					column-gap: 10px;
+					@media screen and (min-width: 640px) {
+						justify-content: start;
+					}
+					@media screen and (min-width: 768px) {
+						column-gap: 18px;
+					}
+					@media screen and (min-width: 1024px) {
+						column-gap: 20px;
+					}
+					@media screen and (min-width: 1280px) {
+						column-gap: 18px;
+					}
+					span {
+						font-family: "Nunito", sans-serif;
+						font-size: 32px;
+						color: #fdfc28;
+						@media screen and (min-width: 768px) {
+							font-size: 40px;
+						}
+						@media screen and (min-width: 1280px) {
+							font-size: 48px;
+						}
+						@media screen and (min-width: 1920px) {
+							font-size: 96px;
+						}
+					}
+					p {
+						font-size: 14px;
+						@media screen and (min-width: 640px) {
+							font-size: 18px;
+						}
+						@media screen and (min-width: 768px) {
+							font-size: 20px;
+						}
+						@media screen and (min-width: 1280px) {
+							font-size: 24px;
+						}
+						@media screen and (min-width: 1920px) {
+							font-size: 32px;
+						}
+					}
+				}
+			}
+		}
+		.content-bottom {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			row-gap: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
+			@media screen and (min-width: 640px) {
+				margin-top: 24px;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				column-gap: 15px;
+				padding-left: 0;
+				padding-right: 0;
+			}
+			@media screen and (min-width: 1024px) {
+				margin-top: 34px;
+			}
+			@media screen and (min-width: 1280px) {
+				margin-top: 60px;
+			}
+			@media screen and (min-width: 1920px) {
+				margin-top: 20px;
+			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(margin-top, 20, 56);
+			}
+			@media screen and (min-width: 3072px) {
+				margin-top: 56px;
+			}
+			.item {
+				width: 280px;
+				height: 80px;
+				padding-left: 24px;
+				display: flex;
+				flex-direction: column;
+
+				row-gap: 4px;
+				position: relative;
+				padding-top: 20px;
+				@media screen and (min-width: 640px) {
+					height: 100px;
+					padding-top: 38px;
+				}
+				@media screen and (min-width: 768px) {
+					width: 230px;
+					padding-left: 20px;
+				}
+				@media screen and (min-width: 1024px) {
+					width: 304px;
+					height: 150px;
+					padding-top: 57px;
+					padding-left: 26px;
+				}
+				@media screen and (min-width: 1280px) {
+					width: 384px;
+					height: 200px;
+					padding-top: 76px;
+					padding-left: 33px;
+				}
+				@media screen and (min-width: 1920px) {
+					width: 570px;
+					height: 287px;
+					padding-left: 50px;
+					padding-top: 97px;
+				}
+				@media screen and (min-width: 3072px) {
+					width: 925px;
+					height: 267px;
+				}
+
+				&::before {
+					position: absolute;
+					content: "";
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background-image: url("/section_8/frame-320.svg");
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					@media screen and (min-width: 640px) {
+						background-image: url("/section_8/frame-640.svg");
+					}
+					@media screen and (min-width: 768px) {
+						background-image: url("/section_8/frame-768.svg");
+					}
+					@media screen and (min-width: 1024px) {
+						background-image: url("/section_8/frame-1024.svg");
+					}
+					@media screen and (min-width: 1280px) {
+						background-image: url("/section_8/frame-1280.svg");
+					}
+					@media screen and (min-width: 1920px) {
+						background-image: url("/section_8/frame-1920.svg");
+					}
+					@media screen and (min-width: 3072px) {
+						background-image: url("/section_8/frame-3072.svg");
+					}
+				}
+				&__subtitle {
+					font-size: 16px;
+					font-weight: 300;
+					@media screen and (min-width: 1024px) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 32px;
+					}
+				}
+				&__title {
+					font-family: "Montserrat", sans-serif;
+					font-size: 18px;
+					font-weight: 900;
+					text-transform: uppercase;
+					@media screen and (min-width: 1024px) {
+						font-size: 24px;
+					}
+					@media screen and (min-width: 1280px) {
+						font-size: 30px;
+					}
+					@media screen and (min-width: 1920px) {
+						font-size: 48px;
+					}
+				}
+			}
+		}
+		&__button {
+			display: none;
+			@media screen and (min-width: 640px) {
+				display: block;
+				margin-top: 30px;
+				button {
+					border-radius: 12px;
+					width: 100%;
+					height: 56px;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				button {
+					height: 62px;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				margin-top: 40px;
+				button {
+					height: 56px;
+				}
+			}
+			@media screen and (min-width: 1280px) {
+				button {
+					height: 70px;
+				}
+			}
+		}
+	}
+}

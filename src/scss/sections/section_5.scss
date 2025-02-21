@@ -48,7 +48,7 @@
 		}
 
 		@media screen and (min-width: 1921px) and (max-width: 3072px) {
-			@include mixins.adaptiveSize1920to3072(height, 1197, 2567);
+			@include mixins.adaptiveSize1920to3072(height, 1950, 2567);
 		}
 		@media screen and (min-width: 3072px) {
 			height: 2567px;
@@ -192,7 +192,7 @@
 				&:nth-child(even) {
 					flex-direction: row;
 					.item__image-gradient {
-						left: 0;
+						left: -3px;
 						background-image: linear-gradient(
 							90deg,
 							rgba(255, 255, 255, 1) 40%,
@@ -201,12 +201,51 @@
 					}
 				}
 			}
+			@media screen and (min-width: 1921px) and (max-width: 3072px) {
+				@include mixins.adaptiveSize1920to3072(height, 250, 310);
+				&:nth-child(odd) {
+					.item__image {
+						@include mixins.adaptiveSize1920to3072(
+							width,
+							600,
+							1400
+						);
+					}
+				}
+				&:nth-child(even) {
+					.item__image {
+						@include mixins.adaptiveSize1920to3072(
+							width,
+							600,
+							1368
+						);
+					}
+				}
+			}
 			@media screen and (min-width: 3072px) {
+				height: 310px;
 				&:nth-child(2) {
 					transform: rotate(0);
 				}
 				&:nth-child(4) {
 					transform: rotate(0);
+				}
+
+				&:nth-child(odd) {
+					.item__wrapper-text {
+						padding: 40px 60px 0 0;
+					}
+					.item__image {
+						width: 1400px;
+					}
+				}
+				&:nth-child(even) {
+					.item__wrapper-text {
+						padding: 40px 0 0 60px;
+					}
+					.item__image {
+						width: 1368px;
+					}
 				}
 			}
 		}
@@ -250,6 +289,12 @@
 				@media screen and (min-width: 1920px) {
 					font-size: 32px;
 				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(font-size, 32, 36);
+				}
+				@media screen and (min-width: 3072px) {
+					font-size: 36px;
+				}
 			}
 			p {
 				margin-top: 20px;
@@ -265,6 +310,12 @@
 				}
 				@media screen and (min-width: 1920px) {
 					font-size: 24px;
+				}
+				@media screen and (min-width: 1921px) and (max-width: 3072px) {
+					@include mixins.adaptiveSize1920to3072(font-size, 24, 32);
+				}
+				@media screen and (min-width: 3072px) {
+					font-size: 32px;
 				}
 			}
 			&__image {
@@ -297,11 +348,11 @@
 				);
 				position: absolute;
 				top: 0;
-				left: 0;
+				left: -3px;
 				@media screen and (min-width: 1024px) {
 					width: 100px;
 					height: 100%;
-					right: 0;
+					right: -3px;
 					left: unset;
 					background-image: linear-gradient(
 						270deg,
